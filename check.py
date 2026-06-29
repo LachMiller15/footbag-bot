@@ -78,7 +78,25 @@ def send_alert(store, newly_in_stock):
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(user, password)
         smtp.send_message(msg)
-    print(f"  -> alerted ({names}) to {', '.join(recipients)}")
+    print(f"  -> emailed ({names}) to {', '.join(recipients)}")
+
+    # Push to phone via ntfy (free, reliable) if a topic is configured.
+    topic = os.environ.get("NTFY_TOPIC")
+    if topic:
+        try:
+            requests.post(
+                f"https://ntfy.sh/{topic}",
+                data=body.encode("utf-8"),
+                headers={
+                    "Title": f"In stock: {names}"[:100],
+                    "Tags": "shopping_cart",
+                    "Click": f"{store.rstrip('/')}/products/{newly_in_stock[0]['handle']}",
+                },
+                timeout=15,
+            )
+            print(f"  -> pushed to ntfy topic '{topic}'")
+        except Exception as e:
+            print(f"  !! ntfy push failed: {e}")
 
 
 def main():
