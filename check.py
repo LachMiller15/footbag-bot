@@ -80,6 +80,26 @@ def send_alert(store, newly_in_stock):
         smtp.send_message(msg)
     print(f"  -> emailed ({names}) to {', '.join(recipients)}")
 
+    # Real SMS via Twilio if configured.
+    sid = os.environ.get("TWILIO_SID")
+    if sid:
+        try:
+            resp = requests.post(
+                f"https://api.twilio.com/2010-04-01/Accounts/{sid}/Messages.json",
+                auth=(sid, os.environ["TWILIO_TOKEN"]),
+                data={
+                    "From": os.environ["TWILIO_FROM"],
+                    "To": os.environ["TWILIO_TO"],
+                    "Body": f"In stock: {names}\n{store.rstrip('/')}/products/"
+                            f"{newly_in_stock[0]['handle']}"[:300],
+                },
+                timeout=15,
+            )
+            resp.raise_for_status()
+            print(f"  -> texted {os.environ['TWILIO_TO']}")
+        except Exception as e:
+            print(f"  !! twilio sms failed: {e}")
+
     # Push to phone via ntfy (free, reliable) if a topic is configured.
     topic = os.environ.get("NTFY_TOPIC")
     if topic:
