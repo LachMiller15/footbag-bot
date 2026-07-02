@@ -1,6 +1,6 @@
 {
   "amber-8-metal": false,
-  "assassin-32-metal": true,
+  "assassin-32-metal": false,
   "assassin-32-panel-plastic-filled-footbag": false,
   "assassin-32-sand": false,
   "atom-92-plastic-filled-footbag": false,
@@ -39,7 +39,7 @@
   "midnight-32-sand": false,
   "mystery-chainmail-footbag": false,
   "mystery-footbag": false,
-  "nemesis-14-panel-metal-filled-footbag": true,
+  "nemesis-14-panel-metal-filled-footbag": false,
   "nemesis-14-sand": false,
   "nemesis-14-sand-green": false,
   "paradox-14-sand": false,
