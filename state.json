@@ -1,7 +1,7 @@
 {
   "amber-8-metal": false,
-  "assassin-32-metal": false,
-  "assassin-32-panel-plastic-filled-footbag": false,
+  "assassin-32-metal": true,
+  "assassin-32-panel-plastic-filled-footbag": true,
   "assassin-32-sand": false,
   "atom-92-plastic-filled-footbag": false,
   "bullseye-62": false,
@@ -47,7 +47,7 @@
   "patriot-120-panel-plastic-filled-footbag": false,
   "pogo-8-panel-metal-filled-footbag": false,
   "snowball-32-panel-plastic-filled-footbag": false,
-  "whirl-6-metal": false,
+  "whirl-6-metal": true,
   "whirl-6-panel-plastic-filled-footbag": false,
   "whirl-6-panel-sand-filled-footbag": true
 }
