@@ -1,4 +1,5 @@
 {
+  "20x-phantom14-panel-metal-bulk-pack": true,
   "amber-8-metal": false,
   "assassin-32-metal": true,
   "assassin-32-panel-plastic-filled-footbag": true,
@@ -45,9 +46,11 @@
   "paradox-14-sand": false,
   "paradox-14-sand-bluegreenblack": false,
   "patriot-120-panel-plastic-filled-footbag": false,
+  "phantom-14-panel-metal-filled-footbag": true,
   "pogo-8-panel-metal-filled-footbag": false,
   "snowball-32-panel-plastic-filled-footbag": false,
   "whirl-6-metal": true,
   "whirl-6-panel-plastic-filled-footbag": false,
-  "whirl-6-panel-sand-filled-footbag": true
+  "whirl-6-panel-sand-filled-footbag": true,
+  "wholesale-10-x-phantom-14-panel-metal-filled-footbag": true
 }
