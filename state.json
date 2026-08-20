@@ -1,7 +1,7 @@
 {
   "20x-phantom14-panel-metal-bulk-pack": true,
   "assassin-32-metal": false,
-  "assassin-32-panel-plastic-filled-footbag": false,
+  "assassin-32-panel-plastic-filled-footbag": true,
   "assassin-32-sand": false,
   "atom-92-plastic-filled-footbag": false,
   "black-dragonfly-crew-socks-3-pack": true,
@@ -22,7 +22,7 @@
   "midnight-32-sand": false,
   "mystery-chainmail-footbag": false,
   "mystery-footbag": false,
-  "nemesis-14-panel-metal-filled-footbag": true,
+  "nemesis-14-panel-metal-filled-footbag": false,
   "nemesis-14-panel-plastic-filled-footbag": true,
   "nemesis-14-sand": false,
   "nemesis-14-sand-green": true,
